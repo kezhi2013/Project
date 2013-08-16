@@ -1,0 +1,1911 @@
+﻿/*!
+ * Bootstrap v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+/*dropdown-menu*/
+ul.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 0.1em 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 0.1em solid #ccc;
+    border: 0.1em solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+/*form*/
+.dataForm input.textInput{
+    border-top-color:transparent;
+    border-left-color:transparent;
+    border-right-color:transparent;
+}
+.dataForm input.textInput:hover,.dataForm input.textInput:focus{
+    border-top-color:#cccccc;
+    border-left-color:#cccccc;
+    border-right-color:#cccccc;
+    border-color:black;
+}
+/*control-grou*/
+.control-group .controls span.InfoValue{
+    display:inline-block;
+    height:2.4em;
+    line-height:2.4em;
+    font-size:1.4em;
+    padding:0 0.5em;
+    color: #666;
+    cursor: pointer;
+}
+.control-group .controls div.InfoValue{
+    position:relative;
+    padding:0.5em 0;
+    font-size:1.4em;
+    color:black;
+    cursor:pointer;
+}
+.control-group .controls div.editable.imgBox{
+    display:inline-block;
+    position:relative;
+    cursor:pointer;
+}
+.control-group .controls div.editable.imgBox:hover::after{
+    content:"编辑图片";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    display:block;
+    height:2.4em;
+    line-height:2.4em;
+    background-color:rgba(0,0,0,0.3);
+    top:50%;
+    margin-top:-1.2em;
+    font-size:1.4em;
+    color:white;
+    text-align:center;
+}
+.control-group .controls img.InfoValue{
+    height:16em;
+    border:0.2em solid #ddd;
+}
+.control-group .help-block,.control-group .help-inline {
+    color: #666666;
+    text-shadow: 0 -0.05em 0.05em rgba(0, 0, 0, 0.2);
+}
+.control-group .help-block {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+.control-group .help-inline {
+    display:inline-block;
+    vertical-align:top;
+    font-size: 1.4em;
+    height:2.4em;
+    line-height: 2.4em;
+    background-color:#ef4f69;
+    padding:0 1em;
+    color:white !important;
+    position:relative;
+    margin-left:2em;
+}
+.control-group .help-inline:before{
+    content:"";
+    position:absolute;
+    display: block;
+    top:0.5em;
+    left: -2em;
+    width:0;
+    height:0;
+    border-color: #ef4f69 !important;
+    border-left: 2em solid transparent !important;
+    border-top: 1em solid #fff;
+}
+/*form-vertical form*/
+.form-vertical .control-group{
+}
+.form-vertical .control-group label.control-label{
+    display:block;
+    width: 100%;
+    line-height:2.4em;
+    height:2.4em;
+    text-align: left;
+    color: #373737;
+    font-weight:bold;
+    text-overflow:ellipsis;
+    cursor: pointer;
+    position:relative;
+}
+/*form-horizontal form*/
+.form-horizontal .control-group{
+    margin-bottom: 1.5em;
+}
+.form-horizontal .control-group:before,.form-horizontal .control-group:after {
+    display: table;
+    content: "";
+}
+.form-horizontal .control-group:after {
+    clear: both;
+}
+.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+    display: table;
+    content: "";
+}
+.form-horizontal .control-group label.control-label{
+    float:left;
+    width: 7em;
+    line-height:2.4em;
+    height:2.4em;
+    text-align: center;
+    color: #373737;
+    color:#d88e90;
+    /*font-weight:bold;*/
+    text-overflow:ellipsis;
+    /*text-shadow: 0 -0.1em 0.1em rgba(0, 0, 0, 0.2);*/
+    cursor: pointer;
+    position:relative;
+}
+.form-horizontal .control-group .controls{
+    margin-left: 10.5em;
+}
+/*control-group*/
+.control-group.warning > label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
+    color: #1c628b;
+}
+.control-group.warning .checkbox,
+.control-group.warning .radio,
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  color: #1c628b;
+  border-color: #1c628b;
+}
+.control-group.warning .checkbox:focus,
+.control-group.warning .radio:focus,
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #134461;
+  -webkit-box-shadow: 0 0 6px #369bd7;
+  -moz-box-shadow: 0 0 6px #369bd7;
+  box-shadow: 0 0 6px #369bd7;
+}
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
+  color: #1c628b;
+  background-color: #8bc5e8;
+  border-color: #1c628b;
+}
+
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+    color: #bd4247;
+}
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+    color: #bd4247;
+    border-color: #bd4247;
+}
+.control-group.error .checkbox:focus,
+.control-group.error .radio:focus,
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+    border-color: #983538;
+    -webkit-box-shadow: 0 0 0.6em #d88e90;
+    -moz-box-shadow: 0 0 0.6em #d88e90;
+    box-shadow: 0 0 0.6em #d88e90;
+}
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
+    color: #bd4247;
+    background-color: #eddbe3;
+    border-color: #bd4247;
+}
+
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+    color: #669533;
+}
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+    color: #669533;
+    border-color: #669533;
+}
+.control-group.success .checkbox:focus,
+.control-group.success .radio:focus,
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+    border-color: #4c6f26;
+    -webkit-box-shadow: 0 0 0.6em #99ca63;
+    -moz-box-shadow: 0 0 0.6em #99ca63;
+    box-shadow: 0 0 0.6em #99ca63;
+}
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
+    color: #669533;
+    background-color: #ccddbb;
+    border-color: #669533;
+}
+.control-group.warning .checkbox:focus,
+.control-group.warning .radio:focus,
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #134461;
+  -webkit-box-shadow: 0 0 0.6em #369bd7;
+  -moz-box-shadow: 0 0 0.6em #369bd7;
+  box-shadow: 0 0 0.6em #369bd7;
+}
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
+  color: #1c628b;
+  background-color: #8bc5e8;
+  border-color: #1c628b;
+}
+
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+  color: #bd4247;
+}
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: #bd4247;
+  border-color: #bd4247;
+}
+.control-group.error .checkbox:focus,
+.control-group.error .radio:focus,
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+  border-color: #983538;
+  -webkit-box-shadow: 0 0 0.6em #d88e90;
+  -moz-box-shadow: 0 0 0.6em #d88e90;
+  box-shadow: 0 0 0.6em #d88e90;
+}
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
+  color: #bd4247;
+  background-color: #eddbe3;
+  border-color: #bd4247;
+}
+
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+  color: #669533;
+}
+.control-group.success .checkbox,
+.control-group.success .radio,
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  color: #669533;
+  border-color: #669533;
+}
+.control-group.success .checkbox:focus,
+.control-group.success .radio:focus,
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+  border-color: #4c6f26;
+  -webkit-box-shadow: 0 0 0.6em #99ca63;
+  -moz-box-shadow: 0 0 0.6em #99ca63;
+  box-shadow: 0 0 0.6em #99ca63;
+}
+.control-group.success .input-prepend .add-on,
+.control-group.success .input-append .add-on {
+  color: #669533;
+  background-color: #ccddbb;
+  border-color: #669533;
+}
+/*passwordStrength*/
+.passwordStrength{
+    width:20em;
+    font-size:1.4em;
+}
+.passwordStrength>span{
+    display:inline-block;
+    width:33%;
+    height:1.6em;
+    background-color:#ddd;
+}
+.passwordStrength>span.week.actived{
+    background-color:#ef4f69;
+}
+.passwordStrength>span.middle.actived{
+    background-color:#ff6a00;
+}
+.passwordStrength>span.strong.actived{
+    background-color:#4cff00;
+}
+/* Styling the element first */
+/* Need to add the keyframe animations now */
+@-webkit-keyframes move {
+  to { left: 50%; }
+}
+@-webkit-keyframes cover {
+  from, 49.9% { z-index: 1; }
+  50.1%, to { z-index: 0; }
+}
+.flickr-spinner {
+  width: 8em;
+  height: 4em;
+  position: absolute;
+  margin: 20px auto;
+  left:50%;
+  top:25%;
+}
+/* Using pseudo elements now */
+.flickr-spinner:before,
+.flickr-spinner:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  /* `alternate` seems to work good but the problem
+  is both the circles are stacked...
+  starting the animation backwards on the
+  first play for one of them will fix this. */
+  /* After each cycle, the stack order changes
+  in the original animation, so lets achieve that. */
+  /* and we're done ... */
+  -webkit-animation:
+    move ease-in-out 1s infinite alternate,
+    cover 2s infinite reverse;
+}
+.flickr-spinner:before {
+  background: #0063dc; /* blue one */
+  -webkit-animation-direction: alternate-reverse, normal; /* yay! */
+}
+.flickr-spinner:after {
+  background: #ff0084; /* pink one */
+}
+/*FileSelector*/
+div.FileSelector {
+    display:inline-block;
+    position:relative;
+    height:3em;
+    background-color:white;
+    border:0.2em solid #ddd;
+    overflow:hidden;
+}
+div.FileSelector input[type="file"]{
+    position:relative;
+    opacity:0;
+    background-color:white;
+}
+div.FileSelector label{
+    position:absolute;
+    left:0;
+    top:0;
+    display:block;
+    width:100%;
+    height:100%;
+    line-height:3em;
+    padding-left:0.5em;
+    font-size:1.2em;
+    font-weight:bold;
+    text-overflow:ellipsis;
+    color:#666;
+    padding-left:3em;
+    overflow:hidden;
+}
+div.FileSelector label:before{
+    display:block;
+    position:absolute;
+    left:0.3em;
+    top: 50%;
+    margin-top: -0.8em;
+    font-family: 'IconFont-Base';
+	font-style: normal;
+	speak: none;
+    text-align:center;
+    content: "\e015";
+    font-size:2em;
+    font-weight:normal;
+}
+/*列表样式统一*/
+ul.inlineList > li {
+    display:inline-block;
+}
+ul.pullLeft-list > li {
+    float:left;
+}
+/*1级垂直导航列表*/
+ul.Nav,ul.Nav ul,ul.dir-list,ul.data-list,ol.dir-list,ol.data-list,ul.form-list{
+    list-style-type:none;
+    line-height:1;
+    margin-left:0;
+}
+ul.Nav,ul.dir-list{
+    margin-left:0;
+}
+ul.Nav.vertical-list.leverl1  > li {
+    background-color: white;
+    width: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    position: relative;
+}
+ul.Nav.vertical-list.leverl1  > li.nav-header{
+    padding: 0.3em 0.5em;
+    font-size: 1.6em;
+    line-height: 1.8em;
+    color: #999999;
+    /*color:#d42;*/
+    text-shadow: 0 0.1em 0 rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+ul.Nav.vertical-list.leverl1  > li:not(.nav-header) {
+    border:0.1em solid #ddd;
+    /*text-shadow: 0 -0.1em 0.1em rgba(0, 0, 0, 0.2);*/
+}
+ul.Nav.vertical-list.leverl1  > li.actived{
+    background-color:#ddd;
+}
+ul.Nav.vertical-list.leverl1  > li.actived:before{
+    width:0.3em;
+    display:block;
+    height:100%;
+    position:absolute;
+    content:"";
+    background-color:red;
+}
+ul.Nav.vertical-list.leverl1  > li:not(.nav-header):hover{
+    margin-left:0.7em;
+}
+ul.Nav.vertical-list.leverl1  > li .item-title{
+    width:100%;
+    display:inline-block;
+    font-size:1.4em;
+    padding:0.5em;
+    padding-left:1em;
+    color: #666;
+    text-decoration: none;
+    font-weight:bold;
+    cursor:pointer;
+}
+/*2级垂直导航列表*/
+ul.Nav.vertical-list.level2 {
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 0 10px #BDBDBD;
+    -webkit-box-shadow: 0 0 10px #BDBDBD;
+    -moz-box-shadow: 0 0 10px #BDBDBD;
+    background-color: white;
+}
+ul.Nav.vertical-list.level2 li{
+    /*border-bottom:0.1em solid #666;*/
+}
+ul.Nav.vertical-list.level2 li .title{
+    color:#666;
+    cursor:pointer; 
+}
+/*level1 li*/
+ul.Nav.vertical-list.level2 > li{
+    height:auto;
+    margin-bottom:0.2em;
+}
+ul.Nav.vertical-list.level2 > li.opened > .ItemBody > .ItemMainDiv > .title:before{
+    display:inline-block;
+    content:"33";
+    width:1.3em;
+    height:1.3em;
+    line-height:1.3em;
+    border-radius:1.3em;
+    border:0.1em solid white;
+    margin-right:0.5em;
+    font-family:IconFont-Base;
+    content:"\e050";
+    text-align:center;
+    color:white;
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemMainDiv > .title:before{
+    display:inline-block;
+    content:"33";
+    width:1.3em;
+    height:1.3em;
+    line-height:1.3em;
+    border-radius:1.3em;
+    border:0.1em solid white;
+    margin-right:0.5em;
+    font-family:IconFont-Base;
+    content:"\e04f";
+    text-align:center;
+    color:white;
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody{
+
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemMainDiv{
+    /*background-color:rgb(51,48,44);*/
+    background-color:#00ccff;
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemMainDiv > .title{
+    display:block;
+    font-size:1.6em;
+    padding:0.5em;
+    color:white;
+}
+/*level2 li*/
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemChildUlBox > ul.ItemChildUl > li{
+    line-height:1;
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemChildUlBox > ul.ItemChildUl > li.actived{
+    /*background-color:rgb(19,174,96);*/
+    /*background-color:#ddd;*/
+    background-color:rgb(238, 238, 238);
+    position:relative;
+    border-left: 0.5em solid rgb(19,174,96);
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemChildUlBox > ul.ItemChildUl > li.actived:after{
+    display:none;
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    right:-0.7em;
+    z-index:1000;
+    top:50%;
+    margin-top:-1em;
+    border-top:1em solid transparent; 
+    border-bottom:1em solid transparent; 
+    border-left:0.7em solid rgb(19,174,96); 
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemChildUlBox > ul.ItemChildUl > li:last-child{
+    border-bottom:none;
+}
+ul.Nav.vertical-list.level2 > li > .ItemBody > .ItemChildUlBox > ul.ItemChildUl > li > .ItemBody > .ItemMainDiv > .title{
+    display:block;
+    padding:1em;
+    color:#333;
+    font-size:1.2em;
+    font-weight: bold;
+    /*text-shadow: 0 1px 0 #ddd;*/
+    /*text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);*/
+}
+/*目录列表*/
+.dir-list .pull-left{
+    margin-right:1em;
+}
+.dir-list .pull-right{
+    margin-left:1em;
+}
+.dir-list .item-title{
+    font-size:1.6em;
+    color:#333;
+    line-height:1;
+}
+.dir-list a.item-title:hover{
+    color:#00ccff;
+}
+.dir-list .ItemMainProperty{
+    font-size:1.3em;
+    color:#333;
+}
+
+.vertical-list.data-list.dir-list.SimpleTextList li{
+}
+.vertical-list.data-list.dir-list.SimpleTextList.table li.tablerow .tablecell{
+    padding:0.3em 0;
+}
+.vertical-list.data-list.dir-list.SimpleTextList .item-title{
+    font-size:1.2em;
+}
+.vertical-list.data-list.dir-list.SimpleTextList .item-subProperty{
+    font-size:1.3em;
+    color:#999999
+}
+
+ul.vertical-list.data-list.dir-list.large .item-title{
+    font-size:1.8em;
+    font-weight:bold;
+    color:#333;
+}
+ul.vertical-list.data-list.dir-list.large > li{
+    padding:0.5em;
+    margin-bottom:1em;
+    overflow:hidden;
+}
+ul.vertical-list.data-list.dir-list.large > li:first-child{
+    margin-top:0;
+}
+ul.vertical-list.data-list.dir-list.large > li:hover{
+    outline:0.2em solid #999;
+}
+ul.vertical-list.data-list.dir-list.large > li div.tablecell.detailCell{
+    padding-left:0.5em;
+}
+/*ul的有序目录数据列表*/
+ol.vertical-list.data-list.dir-list.AutoNumber{
+}
+ol.vertical-list.data-list.dir-list.AutoNumber li{
+    counter-increment:mycounter;
+}
+ol.vertical-list.data-list.dir-list.AutoNumber li:before{
+    content:counter(mycounter);
+    vertical-align:top;
+    font-size:1.8em;
+}
+ol.vertical-list.data-list.dir-list.AutoNumber.table{
+    padding-left:0;
+}
+ol.vertical-list.data-list.dir-list.AutoNumber.table li.tablerow::before{
+    position:initial;
+    padding-right:0.5em;
+}
+ol.vertical-list.data-list.dir-list.AutoNumber li:nth-child(1)::before,
+ol.vertical-list.data-list.dir-list.AutoNumber li:nth-child(2)::before,
+ol.vertical-list.data-list.dir-list.AutoNumber li:nth-child(3)::before{
+    color:red;
+}
+/*文章类中的数据ul数据列表*/
+ul.vertical-list.data-list.artical-list{
+}
+ul.vertical-list.data-list.artical-list li{
+    line-height:150%;
+}
+ul.vertical-list.data-list.artical-list li{
+    padding:0.2em 0;
+}
+/*水平的信息列表,如用于footer*/
+dl.inlineList > dt, dl.inlineList > dd {
+    display:inline;
+    font-size:1.2em;
+}
+dl.inlineList>dd{
+}
+dl.inlineBlock-list > dt, dl.inlineBlock-list> dd {
+    display:inline-block;
+}
+dl.data-list.inlineBlock-list {
+}
+dl.data-list.inlineBlock-list > dt,dl.data-list.inlineBlock-list > dd{
+    line-height:200%;
+}
+
+dl.horizontal-list{
+    display:table-row;
+}
+dl.horizontal-list > dt, dl.horizontal-list > dd {
+    display:table-cell;
+    padding:0.3em;
+    vertical-align:middle;
+}
+dl.horizontal-list > dt{
+    text-align:right;
+}
+/*分页*/
+ul.Pagination {
+    margin-top:4.5em;
+    list-style-type:none;
+    border-top:0.2em solid #00ccff;
+    text-align:center;
+    position:relative;
+}
+ul.Pagination:before,ul.Pagination:after{
+    content: "";
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    border-radius: 0.5em;
+    background-color: #00ccff;
+    top: -0.5em;
+}
+ul.Pagination:before{
+    left:0;
+}
+ul.Pagination:after{
+    right:0;
+}
+ul.Pagination li{
+    display:inline-block;
+    margin-left:0.2em;
+    margin-top:1em;
+    position:relative;
+    transition:0.5s;
+}
+ul.Pagination li.pager-current{
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    transform-origin: 0 -1em;
+    -ms-transform-origin: 0 -1em;
+    -webkit-transform-origin: 0 -1em;
+}
+ul.Pagination li.pager-current a{
+    font-weight:bold;
+}
+ul.Pagination li a{
+    display:block;
+    width:2.5em;
+    height:2.5em;
+    line-height:2.5em;
+    border-radius:2.5em;
+    text-align:center;
+    border:0.1em solid #333;
+    text-align:center;
+    color:#333;
+    font-size:1.2em;
+    position:relative;
+}
+ul.Pagination li:before{
+    display:block;
+    position:absolute;
+    left:50%;
+    top:-1em;
+    height:1em;
+    width:0;
+    margin-left:-0.05em;
+    border-left:0.1em solid #999;
+    content:"";
+}
+ul.Pagination li.pager-current::before{
+    background-color:#00ccff;
+}
+ul.Pagination li:hover,ul.Pagination li.pager-current{
+    border-color:#00ccff;
+}
+ul.Pagination li:hover a,ul.Pagination li.pager-current a{
+    color:#00ccff;
+}
+ul.Pagination li:hover::before,ul.Pagination li:hover a{
+    border-color:#00ccff;
+}
+/*TimeAxis*/
+.TimeAxisBox {
+    margin-top:2em;
+    width:100%;
+    height:auto;
+    position:relative;
+    padding-bottom:6em;
+}
+.TimeAxisBox:before{
+    display:block;
+    width:0.2em;
+    height:100%;
+    position:absolute;
+    background-color:rgb(19,174,96);
+    content:"";
+    left:10.2em;
+}
+ul.TimeAxisUl,ul.TimeAxisUl > li > ul{
+    list-style-type:none;
+}
+ul.TimeAxisUl > li > div.Year{
+    color:#00ccff;
+    font-size:2.4em; 
+}
+ul.TimeAxisUl > li > ul {
+    height:auto;
+    position:relative;
+    overflow:hidden;
+}
+ul.TimeAxisUl > li > ul >  li.TimeLi{
+    width: 100%;
+    min-height: 5em;
+    margin-top:2em;
+    display:table;
+    position:relative;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .TimeBlock{
+    position:absolute;
+    left:0;
+    padding-right:1em;
+    text-align:right;
+    padding-top:1em;
+    width:5em;
+    font-size:1.6em;
+    color:#999;
+}
+ul.TimeAxisUl > li > ul > li > .TimeNode{
+    width:4.4em;
+    height:4.4em;
+    left:8em;
+    position:absolute;
+    z-index:100;
+}
+ul.TimeAxisUl > li > ul > li > .TimeNode > button{
+    width:4em;
+    height:4em;
+    background-color:white;
+    border:0.2em solid #ddd;
+    border-radius:5em;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox{
+    position:relative;
+    margin-left:12.4em;  
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox:before{
+    display:block;
+    content:"";
+    position:absolute;
+    width:4em;
+    height:0.15em;
+    top:2.1em;
+    background-color:rgb(19,174,96);
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox > .Content{
+    margin-left:4em;
+    min-height:5em;
+    padding:1em;
+    position:relative;
+    border:0.2em solid #ddd;
+    border-left-width:0.5em;
+    background-color:white;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox > .Content:before{
+    display:block;
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    border-top:1em solid transparent;
+    border-bottom:1em solid transparent;
+    border-right:2em solid #ddd;
+    top:1em;
+    left:-2em;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox > .Content > h5{
+    padding:0;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox > .Content > h5 > a{
+    color:#333;
+}
+ul.TimeAxisUl > li > ul > li.TimeLi > .ContentBox > .Content > p{
+    font-size:1.2em;
+    color:#999;
+    line-height:2em;
+}
+/*数据表格*/
+table.DataTable {
+    width:100%;
+    border:0;
+    border-collapse:collapse;
+}
+table.DataTable > caption{
+    padding:0.5em;
+    font-size:1.2em;
+}
+table.DataTable thead{
+    /*background-color:rgb(19,174,96);*/
+    background-color:#ddd;
+}
+table.DataTable th {
+    color:#333;
+}
+table.DataTable th,table.DataTable td{
+    border:none;
+    margin:0;
+    vertical-align:middle;
+}
+table.DataTable tr{
+    padding:1em 1em;
+    color:#666; 
+}
+table.DataTable tbody tr:not(.Add):hover{
+    background-color:#eee;
+}
+table.DataTable th{
+    padding:0.5em 0.5em;
+    text-align:center;
+    font-size:1.4em;
+    color:#333;
+}
+table.DataTable td{
+    padding:1em 0.5em;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+table.DataTable td > span{
+    font-size:1.3em;
+}
+table.DataTable tr.Add:hover{
+}
+table.DataTable tr.Add td{
+    padding:0;
+    border-bottom:none;
+}
+table.DataTable tr.Add button.Add {
+    margin-top:0.5em;
+    width:100%;
+}
+/*Accordion*/
+label[accordiontarget]{
+    font-size:1.4em !important;
+}
+label[accordiontarget]::after{
+    content:"";
+    font-family: 'IconFont-Base';
+	font-style: normal;
+	speak: none;
+    text-align:center;
+    content: "...";
+    color:#00ccff;
+    font-size:1.4em;
+    font-weight:bold;
+    margin-left:0.5em;
+}
+.Accordion {
+    display:none;
+    border:0.2em solid #00ccff;
+    padding:1em;
+    margin-top:1em;
+    margin-left:-1em;
+    position:relative;
+}
+.Accordion:before{
+    content:"";
+    border-left:1em solid transparent; 
+    border-right:1em solid transparent; 
+    border-bottom:1em solid #00ccff; 
+    width:0; 
+    height:0; 
+    position:absolute;
+    left:3em;
+    top:-1em;
+}
+/*下拉选择器*/
+.DropSelector {
+    display:inline-block;
+    position:relative;
+    margin: 0 auto;
+    width:10em;
+}
+.DropSelector > *:first-child{
+    display:block;
+    text-align:left;
+    min-width:5em;
+    padding:0em 0em 0em 0.5em;
+    height:2.4em;
+    line-height:2.4em;
+    border:0.2em solid #ddd;
+    font-size:1.4em;
+}
+.DropSelector > *:first-child:after{
+    font-family:"IconFont-Base";
+    content:"\e15c"; 
+    display:block;
+    float:right;
+    color:#333;
+}
+.DropSelector ul{
+    border:0.2em solid #aeb2b5;
+    background-color:#fff;
+    position:absolute;
+    overflow:hidden;
+    min-width: 10em;
+    top:100%;
+    left:0;
+    right:0; 
+    z-index:1000;
+    display:none;
+}
+.DropSelector.active ul{
+    display:block;
+}
+.DropSelector.active > *:first-child:after{
+    -webkit-transform:rotateX(180deg);
+}
+.DropSelector ul li{
+    text-align:left;
+    padding:0.5em 1em;
+    font-size:1.2em;
+    cursor:default;
+    color:#696969;
+    font-weight:500;
+}
+.DropSelector ul li:hover{
+    background-color:rgb(19,174,96);
+    color:white;
+}
+/*图片上传插件*/
+.ImgUploader iframe {
+    display:none;
+}
+.ImgUploader .ProgressBar {
+    width:100%;
+    height:2em;
+    background-color:#ddd;
+}
+.ImgUploader .ProgressBar span{
+    display:block;
+    width:0;
+    height:2em;
+    background-color:rgb(19,174,96);
+}
+.ImgUploader .ImgPreview {
+    background-color:#ddd;
+    border:0.2em solid #ddd;
+    overflow:hidden;
+    text-align:center;
+    display:inline-block;
+}
+.ImgUploader .ImgPreview > img{
+    position:absolute;
+    margin:0 auto;
+}
+.ImgUploader .cuttedImgContainer{
+    display:inline-block;
+    vertical-align:top;
+    width:12em;
+    height:12em;
+    overflow:hidden;
+    background-color:#eee;
+    border:0.2em solid #ddd;
+}
+.ImgUploader .cuttedImgContainer > img{
+    width:100%;
+    height:100%;
+}
+/*图片裁剪插件*/
+.jcrop-holder{
+    text-align:left;
+}
+.jcrop-vline, .jcrop-hline{
+    font-size:0;	
+    position:absolute; 
+    background:white url('Jcrop.gif') top left repeat;
+}
+.jcrop-vline{
+    height:100%; 
+    width:1px !important;
+}
+.jcrop-hline{
+    width:100%; 
+    height:1px !important;
+}
+.jcrop-handle{
+    font-size:1px; 
+    width:7px !important; 
+    height:7px !important;	
+    border:1px #eee solid; 
+    background-color:#333; 
+    *width:9px; 
+    *height:9px;
+}
+.jcrop-tracker{
+    width:100%; 
+    height:100%;
+}
+.custom .jcrop-vline,.custom .jcrop-hline{
+    background:yellow;
+}
+.custom .jcrop-handle{
+    border-color:black; 
+    background-color:#C7BB00;
+    -moz-border-radius:3px; 
+    -webkit-border-radius:3px;
+}
+/*动态模块*/
+.DynamicModule {
+    display:block;
+    position:absolute;
+    top:0;
+    background-color:white;
+}
+.DynamicModule.top {
+    left:0;
+    width:100%;
+    border-bottom:0.4em solid #333;
+}
+.DynamicModule.left {
+    left:0;
+    height:100%;
+    /*background-color:rgba(1,1,1,0.5);*/
+    -moz-box-shadow:-3px 0px 12px #333333;
+    -webkit-box-shadow:-3px 0px 12px #333333; 
+    box-shadow:-3px 0px 12px #333333;
+}
+.DynamicModule.right {
+    right:0;
+    height:100%;
+    /*background-color:rgba(1,1,1,0.5);*/
+    -moz-box-shadow:-3px 0px 12px #333333;
+    -webkit-box-shadow:-3px 0px 12px #333333; 
+    box-shadow:-3px 0px 12px #333333;
+}
+.DynamicModule .ModuleHeader{
+    background-color:rgb(19,174,96);
+    padding:2em;
+}
+.DynamicModule .ModuleHeader h1{
+    display:inline-block;
+    color:white;
+}
+.DynamicModule .ModuleHeader .FlexHandle{
+    color:white;
+    float:right;
+}
+.DynamicModule .ModuleHeader .CloseHandle{
+    color:white;
+    float:right;
+}
+.DynamicModule .ModuleBody{
+    background-color:white;
+    position:relative;
+    min-height:25em;
+}
+.DynamicModule .ModuleBody > .loading{
+    display:block;
+    position:absolute;
+    top:1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-animation-name:Loading;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function:linear;/*动画播放频率*/
+    -webkit-animation-iteration-count: infinite;/*动画播放次涒为无限次*/
+}
+.DynamicModule .ModuleBody > iframe{
+    width:100%;
+}
+.DynamicModuleTemplet {
+    display:none;
+    padding:1em;
+}
+.DynamicModuleTemplet.Actived{
+    display:block;
+}
+/*选项卡*/
+.Tabs{
+    position:relative;
+}
+.Tabs > ul{
+    position:relative;
+    border-bottom:0.1em solid #d4d4d4;
+    list-style-type:none;
+    padding-left:1em;
+}
+.Tabs > ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.Tabs > ul > li {
+    float:left;
+    list-style: none;
+    position: relative;
+    margin: 0 .2em 0.1em 0;
+    border:0.1em solid #d4d4d4;
+    padding:0.5em 1em;
+    border-bottom: 0 !important;
+    white-space: nowrap;
+    top:0.1em;
+    border-color:transparent;
+    color:#999;   
+    font-size:1.4em;
+    line-height:1;
+    cursor:default;
+}
+.Tabs > ul > li.Actived{
+    top: 0.2em;
+    font-weight:bold;
+    background-color:white;
+    color: #525252 !important;
+    border-color:#d4d4d4;
+}
+.TabBox{
+    position:relative;
+    border:0.1em solid #d4d4d4;
+    border-top:none;
+}
+.Tab {
+    width:100%;
+    min-height:50em;
+    display:none;
+    padding:1em;
+    overflow-x:hidden;
+}
+.ActivedTab {
+    display:block;
+}
+/*页面面板*/
+.Panel {
+    background-image:url();
+    position:relative;
+}
+.PanelBox{
+    position:relative;
+}
+.PanelBox > .PanelPage {
+    width:100%;
+    min-height:50em;
+    display:none;
+    padding:1em;
+    overflow-x:hidden;
+}
+/*富文本编辑器*/
+.ArticalEditor .toolbar{
+    padding:0.3em;
+    background-color:#dddddd;
+    /*background:-webkit-gradient(linear,0% 0%, 0% 100%, from(#DEDEDE), to(#BDBDBD), color-stop(0.5,#8F8F8F))*/
+}
+.ArticalEditor .toolbar div.toolbuttonGroup{
+    display: inline-block;
+    padding: 0.2em;
+    background-color: white;
+    margin-left:0.2em;
+    border:0.1em solid #999;
+}
+.ArticalEditor .toolbar div.toolbuttonGroup > *{
+    margin-left:0.2em;
+}
+.ArticalEditor .toolbar div.toolbuttonGroup > *:first-child{
+    margin-left:0;
+}
+.ArticalEditor .toolbar button{
+    color:#333;
+    text-shadow: 1px 1px #fff;
+}
+.ArticalEditor .toolbar label.forecolor{
+    color:#333;
+    font-weight:bold;
+    padding:0 0.5em;
+    font-size:1.4em;
+    cursor:pointer;
+    border-bottom:0.2em solid red;
+}
+.ArticalEditor .toolbar label.backcolor{
+    color:#000;
+    font-weight:bold;
+    padding:0.2em 0.5em;
+    font-size:1.4em;
+    background-color:white;
+    cursor:pointer;
+}
+.ArticalEditor .toolbar > .toolbuttonGroup{
+    margin-left:0.2em;
+}
+.ArticalEditor .toolbar > div:last-child{
+    margin-top:0.5em;
+}
+.ArticalEditor .toolbar .DropSelector label{
+    height:1.5em;
+    font-size:1.2em;
+    padding:0;
+    cursor:pointer;
+    color:#333;
+    font-weight:bold;
+}
+.ArticalEditor .toolbar .DropSelector[title='fontname']{
+    width:15em;
+}
+.ArticalEditor .toolbar .DropSelector[title='fontname'] ul{
+    width:10em;
+    text-align:left
+}
+.ArticalEditor .toolbar .DropSelector[title='fontname'] ul li{
+    text-align:left;
+}
+.ArticalEditor .toolbar .DropSelector[title='fontsize']{
+    width:5em;
+}
+.ArticalEditor .toolbar .DropSelector[title='fontsize'] ul{
+    width:17em;
+}
+.ArticalEditor .toolbar button:hover{
+    background-color:#00ccff;
+    color:#fff;
+}
+.ArticalEditor .ArticalBody{
+    width:100%;
+    height:30em;
+    border:0.2em solid #dddddd;
+    transition:0.3s;
+    -webkit-transition:0.3s;
+    -moz-transition:0.3s;
+}
+.ArticalEditor iframe.Artical{
+    width:100%;
+    height:30em;
+    border:none;
+    outline:none;
+}
+.ArticalEditor iframe.Artical:hover{
+}
+.ArticalEditor textarea{
+    width:100%;
+    height:100%;
+    padding:0.3em;
+    tab-size: 4;
+    display:none; 
+    font-family: 'Courier New',Monospace;
+    font-size: small;
+    background-color: #fff;
+    white-space: pre;
+    color: #222;
+}
+/*组织结构图*/
+div.orgStru {
+    overflow-x:auto;
+    padding-bottom:3em;
+    min-height:50em;
+}
+div.orgStru ul{
+    position: relative;   
+    display:table-row;
+}
+div.orgStru ul > li{
+    display:table-cell;
+    padding-top:2em;
+    position:relative;
+    vertical-align:top;
+}
+div.orgStru div.ItemChildUlBox{
+    position:relative;
+    padding-top:2em;
+    overflow:hidden;
+}
+div.orgStru div.ItemChildUlBox > ul.ItemChildUl {
+    position:relative;
+    width:auto;
+}
+div.orgStru div.ItemChildUlBox:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 0.2em solid #00ccff;
+    width: 50%;
+    height: 2em;
+}
+div.orgStru li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 0.2em solid #00ccff;
+    width: 50%;
+    height: 2em;
+}
+div.orgStru > ul > li:before{
+    display:none;
+}
+div.orgStru li::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    border-top: 0.2em solid #00ccff;
+    width: 100%;
+    height:2em;
+}
+div.orgStru li:first-child::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-top: 0.2em solid #00ccff;
+    width: 50%;
+    height:2em;
+}
+div.orgStru li:last-child::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:50%;
+    border-top: 0.2em solid #00ccff;
+    width: 50%;
+    height:2em;
+}
+div.orgStru li:only-child::after{
+    display:none;
+}
+div.orgStru li > .ItemMainDiv{
+    position:relative;
+    margin:0 0.5em;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox{
+    width: 9em;
+    text-align:center;
+    position:relative;
+    border:0.2em solid #ccc; 
+    margin:0 auto; 
+    background-color:white;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox:hover > .ItemToolbar{
+    height:2em;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox.dragged{
+    border-color:red;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox.dragoverTarget{
+    border-color:rgb(19,174,96);
+}
+div.orgStru li > .ItemMainDiv > .ItemBox > .ItemContent{
+    height: 5em;
+    line-height: 5em;
+    font-size: 1.4em;
+    color: #666;
+    text-align:center;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox > .ItemToolbar{
+    height: 0em;
+    margin:0 auto;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    overflow:hidden;
+    -webkit-transition:0.3s;
+    background-color:#666;
+    opacity:0.5;
+}
+div.orgStru li > .ItemMainDiv > .ItemBox > .ItemToolbar button{
+    float:right;
+    color:white;
+}
+/*消息列表*/
+ul.MessageList > li{
+    position:relative;
+    padding-left:22em !important;
+}
+div.MessageInfoBox {
+    border:0.2em solid #eee;
+    position:absolute;
+    left:0.5em;
+    top:0.5em;
+    padding:0.5em;
+    width:20em;
+}
+div.MessageInfoBox:after{
+    content: '';
+    border-top: 0.75em solid transparent;
+    border-bottom: 0.75em solid transparent;
+    border-left: 1.5em solid #eee;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right:-1.5em;
+    top:1em;
+}
+div.liHeader{
+    
+}
+div.liHeader > span.ID{
+    font-size:1.8em;
+    padding:0.5em 0 0.5em 0;
+}
+div.liHeader > span.User{
+    font-size:1.4em;
+    padding:0.5em;
+    padding-left:0;
+    font-weight:bold;
+}
+div.liHeader > span.Time{
+    font-size:1.2em;
+    padding:0.5em;
+}
+div.LiBody{
+    position:relative;
+}
+div.MessageContentBox {
+    padding:0.5em;
+    padding-left:2em;
+    padding-bottom:2em;
+    min-height:7em;
+}
+div.liFooter {
+    position:absolute;
+    bottom:0;
+    padding-left:2em;
+}
+div.liFooter button.delete{
+    /*color:#999;*/
+}
+
+/*颜色选择器*/
+.ColorPicker {
+    border:0.1em solid #333;
+    position:absolute;
+    width:17em;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    background-color:#333;
+    position:absolute;
+    margin-left:-1em;
+    margin-top:1em;
+    /*-moz-box-shadow:7px 5px 10px #666666; 
+    -webkit-box-shadow:7px 5px 10px #666666; 
+    box-shadow:7px 5px 10px #666666;*/
+}
+.ColorPicker:before{
+    content: '';
+    border-left: 0.75em solid transparent;
+    border-right: 0.75em solid transparent;
+    border-bottom: 1.5em solid #333;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:-1.5em;
+    left:1.25em;
+}
+.ColorPicker > .BaseColorPanel{
+    width:100%;
+    height:100%; 
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox{
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    width:16em;
+    padding:0.5em;
+    padding-bottom:0;
+    overflow:hidden; 
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > ul.BaseColorList{
+    width:auto; 
+    height:15em;
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > ul.BaseColorList > li{
+    width:1.5em;
+    height:1.5em;  
+    float:left;
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > table.BaseColorTable{
+    width:auto; 
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > table.BaseColorTable tr{
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > table.BaseColorTable tr > td{
+    width:2em;
+    height:1.5em;  
+    cursor:pointer;
+}
+.ColorPicker > .BaseColorPanel > .BaseColorBox > table.BaseColorTable tr > td:hover{
+    outline:white 0.1em solid;
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter{
+    width:100%;
+    height:3em; 
+    padding:0.5em;
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter > label.SelectedColorLabel{
+    display:block;
+    width:5em;
+    height:100%;
+    color:white;
+    float:left;
+    background-color:white;
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter > button{
+    color:#ccc;
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter > button:hover{
+    color:#00ccff;
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter > button.OkButton{
+    float:right;  
+}
+.ColorPicker > .BaseColorPanel > .ColorPickerFooter > button.CancelButton{
+    float:right;  
+}
+
+/*模态对话框*/
+/*确认对话框*/
+.cover {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #999;
+    -webkit-opacity:0.5;
+    -moz-opacity: 0.5;
+    opacity:0.5;
+    filter: alpha(opacity=80);
+}
+.Dialog {
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:white;
+    -moz-box-shadow:0px 5px 10px #666666; 
+    -webkit-box-shadow:0px 5px 10px #666666; 
+    box-shadow:0px 5px 10px #666666;
+}
+.Dialog .Header{
+    background-color:rgb(19,174,96);
+    padding:1.5em;
+}
+.Dialog .Header h1{
+    display:inline-block;
+    color:white;
+}
+.Dialog .Body{
+    background-color:white;
+    position:relative;
+    height:20em;
+}
+.Dialog .Body{
+    background-color:white;
+    position:relative;
+    height:15em;
+}
+.Dialog .Body .content{
+    background-color:white;
+    position:relative;
+    height:15em;
+    padding:2em 1em;
+    font-size:1.6em;
+    color:#666;
+}
+.Dialog .Footer{
+    background-color:white;
+    position:relative;
+    margin-bottom:1em;
+}
+.Dialog .Footer > button{
+    margin-right:1em;
+}
+.Dialog .Footer > button.OkButton{
+    float:right;  
+}
+.Dialog .Footer > button.CancelButton{
+    float:right;  
+}
+
+/*工具提示气泡*/
+.TooltipObj {
+    display:block;
+    position:absolute;
+    padding:0.5em;
+    background-color:white;
+    border:0.2em solid #999;
+    margin-top:1em;
+}
+.TooltipObj.top::after{
+    content: '';
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid #999;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    left: 1em;
+    top: -1em;  
+}
+.TooltipObj .Body .Content{
+    color:#333;
+    font-size:1.4em;
+}
+
+/*DateSelector*/
+.dateSelector {
+    border-top:0.3em solid #ef4f69;
+    position:absolute;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    background-color:white;
+    -moz-box-shadow:7px 5px 10px #666666; 
+    -webkit-box-shadow:7px 5px 10px #666666; 
+    box-shadow:7px 5px 10px #666666;
+    margin-top:1em;
+}
+.dateSelector:before{
+    content:"";
+    display:block;
+    position:absolute;
+    left:2em;
+    top:-1em;
+    width:0;
+    height:0;
+    border-bottom:1em solid #ef4f69;
+    border-left:0.75em solid transparent;
+    border-right:0.75em solid transparent;
+}
+.dateSelector > .dateNav{
+    position:relative;
+    height:3em;
+    background-color:#666;
+}
+.dateSelector > .dateNav > .currentRange{
+    display:block;
+    height:3em;
+    line-height:3em;
+    margin:0 auto;
+    width:10em;
+    text-align:center;
+    font-size:1.4em;
+    color:white;
+    cursor:pointer;
+}
+.dateSelector > .dateNav > .currentRange:hover{
+    color:#00ccff;
+}
+.dateSelector > .dateNav > button{
+    position:absolute;
+    top:50%;
+    margin-top:-0.8em;
+    color:#ef4f69;
+}
+.dateSelector > .dateNav > button:hover{
+    color:#495468;
+}
+.dateSelector > .dateNav > button.buttonPre{
+    left:0;
+}
+.dateSelector > .dateNav > button.buttonNext{
+    right:0;
+}
+.dateSelector > .datePanel > .datePanelBox{
+    background-color:#f6f6f6;
+    box-shadow: inset 0 0.1em rgba(255,255,255,0.8);
+    width:25em;
+    height:16em;
+}
+.dateSelector > .datePanel > .datePanelBox > div{
+    width:25em;
+    height:16em;
+    padding:2em;
+    display:none;
+}
+.dateSelector ul{
+    list-style-type:none;
+}
+/*centuryView*/
+.dateSelector > .datePanel > .datePanelBox > .centuryViewPanel .centuryViewBox{
+
+}
+.dateSelector > .datePanel > .datePanelBox > .centuryViewPanel .centuryViewBox > ul.centuryUl{
+    overflow:hidden;
+}
+.dateSelector > .datePanel > .datePanelBox > .centuryViewPanel .centuryViewBox > ul.centuryUl > li{
+    float:left;
+    width:5em;
+    height:4em;
+    line-height:1;
+    padding:1em 1.3em;
+    text-align:center;
+    font-size:1.2em;
+    cursor:pointer;
+}
+.dateSelector > .datePanel > .datePanelBox > .centuryViewPanel .centuryViewBox > ul.centuryUl > li:empty{
+    cursor:default;
+}
+.dateSelector > .datePanel > .datePanelBox > .centuryViewPanel .centuryViewBox > ul.centuryUl > li:not(:empty):hover{
+    outline:0.2em solid #ef4f69;
+    outline-offset:-0.2em;
+}
+/*shortCenturyView*/
+.dateSelector > .datePanel > .datePanelBox > .shortCenturyViewPanel .shortCenturyViewBox{
+
+}
+.dateSelector > .datePanel > .datePanelBox > .shortCenturyViewPanel .shortCenturyViewBox > ul.yearUl{
+    overflow:hidden;
+}
+.dateSelector > .datePanel > .datePanelBox > .shortCenturyViewPanel .shortCenturyViewBox > ul.yearUl > li{
+    float:left;
+    width:5em;
+    height:4em;
+    line-height:4em;
+    text-align:center;
+    font-size:1.2em;
+    cursor:pointer;
+}
+.dateSelector > .datePanel > .datePanelBox > .shortCenturyViewPanel .shortCenturyViewBox > ul.yearUl > li:empty{
+    cursor:default;
+}
+.dateSelector > .datePanel > .datePanelBox > .shortCenturyViewPanel .shortCenturyViewBox > ul.yearUl > li:not(:empty):hover{
+    outline:0.2em solid #ef4f69;
+    outline-offset:-0.2em;
+}
+/*yearView*/
+.dateSelector > .datePanel > .datePanelBox > .yearViewPanel .yearViewBox{
+
+}
+.dateSelector > .datePanel > .datePanelBox > .yearViewPanel .yearViewBox > ul.monthUl{
+    overflow:hidden;
+}
+.dateSelector > .datePanel > .datePanelBox > .yearViewPanel .yearViewBox > ul.monthUl > li{
+    float:left;
+    width:5em;
+    height:4em;
+    line-height:4em;
+    text-align:center;
+    font-size:1.2em;
+    cursor:pointer;
+}
+.dateSelector > .datePanel > .datePanelBox > .yearViewPanel .yearViewBox > ul.monthUl > li:hover{
+    outline:0.2em solid #ef4f69;
+    outline-offset:-0.2em;
+}
+/*monthView*/
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel .monthViewBox{
+
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewHead{
+    overflow:hidden;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewHead > li{
+    float:left;
+    width:3em;
+    height:2em;
+    line-height:2em;
+    color:#ef4f69;
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size:1.2em;
+    text-align:center;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewBody{
+    overflow:hidden;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewBody > li{
+    float:left;
+    width:3em;
+    height:2em;
+    line-height:2em;
+    color:#686a6e;
+    font-weight:400;
+    text-transform: uppercase;
+    font-size:1.2em;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewBody > li:empty{
+    cursor:default;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewBody > li:not(:empty):hover{
+    outline:0.2em solid #ef4f69;
+    outline-offset:-0.2em;
+}
+.dateSelector > .datePanel > .datePanelBox > .monthViewPanel ul.monthViewBody > li.currentDay::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0.2em;
+    background-color:#ef4f69;
+}

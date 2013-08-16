@@ -1,0 +1,5 @@
+﻿@import url(../Common/Styles.css);
+@import url(../Plugin/jquery.Slide.css);
+#GoToUs .ModuleBody{ 
+    min-height:40em;
+}

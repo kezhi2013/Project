@@ -1,0 +1,15 @@
+﻿@import url(../Common/Styles.css);
+@import url(../Plugin/jquery.PictureGallery.css);
+#ProjectCase .ModuleBody>ul.data-list {
+    min-height:30em;
+}
+.ProjectCaseImg{
+    overflow:hidden;
+}
+.ProjectCaseImg img{
+    width:30em;
+    height:20em;
+}
+#ProjectCase .ModuleBody>ul.data-list li{
+    position:relative;
+}

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>新闻编辑</title>
+    <link rel="stylesheet" type="text/css" href="../Style/SpecialPage/Admin/AdminHome.css" />
+    <!--[if lt IE 9]>
+        <script src="../JavaScript/Plugin/html5.js"></script>
+        <script src="../JavaScript/Plugin/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../JavaScript/Jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/Plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Setting.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Lib.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/BaseComponent.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/ExtensiveComponent.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Common.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Test.js"></script>
+    <script type="text/javascript" src="../JavaScript/EditPage.js"></script>
+</head>
+<body>
+    <div class="PageMainBody">
+        <div class="Container">
+            <div id="NewsEdit" class="PageModule EditPage">
+                <div class="ModuleBox">
+                    <div class="ModuleBody">
+                        <fieldset class="InfoArea Form">
+                            <div class="dl horizontal-list">
+                                <dl class="InputControlGroup">
+                                    <dt id="jjj" class="InfoKey">分类</dt>
+                                    <dd><div id="NewsCategory" class="DropSelector DataLabel"><label>企业新闻</label><ul><li>企业新闻</li><li>行业新闻</li></ul></div></dd>
+                                </dl>
+                                <dl class="InputControlGroup">
+                                    <dt class="InfoKey">标题</dt>
+                                    <dd><input id="NewsTitle" type="text" class="InputText DataInput Light horizontalfull"/></dd>
+                                </dl>
+                            </div>
+                            <br />
+                            <div id="NewsDoc" class="ArticalEditor">
+                                <iframe class="Artical"></iframe>
+                            </div>
+                            <div><input type="button" class="TextButton SubmitDoc" value="提 交"/></div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

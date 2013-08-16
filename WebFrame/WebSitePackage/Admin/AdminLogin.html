@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>后台登陆</title>
+    <link rel="stylesheet" type="text/css" href="../Style/SpecialPage/Admin/AdminLogin.css" />
+    <!--[if lt IE 9]>
+        <script src="../JavaScript/Plugin/html5.js"></script>
+        <script src="../JavaScript/Plugin/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../JavaScript/Jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/Plugin/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/Lib.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common.js"></script>
+    <script type="text/javascript" src="../JavaScript/AdminLogin.js"></script>
+</head>
+<body class="ClosePage">
+    <div class="PageMainBody">
+        <div class="Container table">
+            <div class="PageModule tablecell">
+                <div class="ModuleBox">
+                    <header class="ModuleHeader"><label class="ModuleTitle"></label></header>
+                    <div class="ModuleBody">
+                    </div>
+                </div>
+            </div>
+            <div id="UserEntrance" class="PageModule tablecell span3">
+                <div class="ModuleBox">
+                    <header class="ModuleHeader"><label class="ModuleTitle">管理员登录</label></header>
+                    <div class="ModuleBody">
+                        <fieldset id="UserLoginBox" class="InfoArea Form">
+                            <div class="dl horizontal-list">
+                                <dl class="InputControlGroup">
+                                    <dt class="InfoKey">用户名</dt>
+                                    <dd><input id="Username" class="InputText DataInput Light horizontalfull" required="required" autocomplete="on"/></dd>
+                                </dl>
+                                <dl class="InputControlGroup">
+                                     <dt class="InfoKey">密码</dt>
+                                     <dd><input id="Password" class="InputText DataInput Light horizontalfull" type="password" required="required" autocomplete="on"/></dd>
+                                </dl>
+                                <dl class="InputControlGroup">
+                                     <dt class="InfoKey">验证码</dt>
+                                     <dd><input id="ValidateCode" class="InputText DataInput Light"/><img id="ValidateCodeImg" class="ValidateCodeImg"/></dd>
+                                </dl>
+                                <dl class="InputControlGroup">
+                                     <dt class="InfoKey"></dt>
+                                     <dd><input id="RememberState" type="checkbox"/><label class="NoticeInfo">记住您的登录状态</label></dd>
+                                </dl>
+                                <dl class="InputControlGroup">
+                                    <dt></dt>
+                                    <dd><input type="submit" id="Submit" class="TextButton" value="提 交"/></dd>
+                                </dl>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

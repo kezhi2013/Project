@@ -1,0 +1,83 @@
+﻿/*
+ * jQuery幻灯片插件
+ * EDIT.KEZHI.20130513
+ * Author: Kezhi
+ */
+div.slideBox{ 
+    width:100%; 
+    height:100%; 
+    overflow:hidden;
+    position:relative;
+}
+div.slideBox ul{ 
+    width:100%;
+    height:100%;
+    position:relative; 
+    background:none; 
+    list-style:none; 
+    padding:0px; 
+    margin:0px;
+}
+div.slideBox ul li{ 
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:none; 
+    list-style:none; 
+    padding:0px; 
+    margin:0px;
+}
+div.slideBox ul li a{ 
+    display:block;
+    width:100%;
+    height:100%;
+}
+div.slideBox ul li a img{ 
+    display:block;
+    width:100%;
+    height:100%;
+    border:none;
+}
+div.slideBox div.Bar {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:3em;
+    background-color:rgb(0,0,0);
+}
+div.slideBox div.Bar label.Summary {
+    position:absolute;
+    padding-left:1em;
+    left:0; 
+    top:0; 
+    height:3em;
+    line-height:3em;
+    font-size:1.2em;
+    font-weight:700;
+    color:white;
+}
+div.slideBox div.Bar div.Nav{ 
+    position:absolute; 
+    right:0; 
+    bottom:0.75em; 
+    height:1.5em;
+}
+div.slideBox div.Bar div.Nav span{ 
+    display:inline-block; 
+    float:left;
+    width:1.5em; 
+    height:1.5em; 
+    line-height:1.5em;
+    font-size:1.2em;
+    background-color:#666; 
+    margin-right:0.75em;
+    text-align:center;
+    cursor:default;
+    color:white;
+}
+div.slideBox div.Bar div.Nav span.active{ 
+    background-color:#093;
+}

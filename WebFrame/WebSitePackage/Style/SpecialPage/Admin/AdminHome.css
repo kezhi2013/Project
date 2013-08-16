@@ -1,0 +1,14 @@
+﻿@import url(../../Common/Styles.css);
+@import url(../../Theme/Pannel.css);
+jquery.jOrgChart
+.PageModule.SideBar {
+    background-color:rgb(29,31,35);
+}
+iframe#Panel {
+    overflow:visible;
+    width: 100%;
+    min-height:50em;
+    height: auto;
+    border-width:0;
+    outline:none;
+}

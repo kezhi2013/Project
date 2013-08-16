@@ -1,0 +1,42 @@
+﻿/*主流pc分辨率*/
+@media only screen and (min-width : 1024px) and (max-width : 1366px){
+
+}
+@media only screen and (max-width : 1024px){
+    .page-header .page-pageNav{
+        display:none !important;
+    }
+    .page-top button.navHandle{
+        display:block !important;
+    }
+    body.fixedHeader-body{
+        padding-top:5em !important;
+    }
+}
+@media only screen and (min-width : 1024px) {
+    body > .page-pageNav.hiddableNav {
+        display:none;
+    }
+}
+@media only screen and (max-width : 767px) {
+    .row-fluid > [class*="span"] {
+        float:none;
+        width:100%;
+        margin-left:0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }   
+    body>.page-pageNav.hiddableNav>ul>li ul{
+        width: 100%;
+        left: 0;
+        border-left: none;
+        position: static;
+    }
+    body>.page-pageNav.hiddableNav>ul>li ul>li{
+        background-color:#333;
+    }
+    .page-top [type=search]{
+        display:none;
+    }
+}

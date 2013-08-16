@@ -1,0 +1,301 @@
+﻿/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/*
+ * Metro UI CSS
+ * (c) 2012-2013 by Sergey Pimenov
+ * Licensed under the MIT License and Commercial
+ */
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+
+body {
+    font-size: 62.5%;
+}
+/*Base Size Content*/
+.container {
+    padding:1em;
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1;
+}
+.container:before,.container:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.container:after {
+    clear: both;
+}
+.container-fluid:before,.container-fluid:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.container-fluid:after {
+    clear: both;
+}
+.container-fluid {
+    padding:1em;
+    *zoom: 1;
+}
+.container-fluid:before, .container-fluid:after {
+    display: table;
+    content: "";
+}
+.container-fluid:after {
+    clear: both;
+}
+.row-fluid {
+    width: 100%;
+}
+.row-fluid:before,.row-fluid:after {
+    display: table;
+    content: "";
+}
+.row-fluid:after {
+    clear: both;
+}
+/*Base Size*/
+.row-fluid>[class*="span"] {
+    display: block;
+    float: left;
+    height:auto;
+    margin-left: 1%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row-fluid>[class*="span"]:first-child {
+    margin-left: 0;
+}
+.span10 {
+    width: 9%;
+}
+.span10:first-child {
+    width:10%;
+}
+.span15 {
+    width:14%;
+}
+.span15:first-child {
+    width:15%;
+}
+.span20 {
+    width:19%;
+}
+.span20:first-child {
+    width:20%;
+}
+.span25 {
+    width:24%;
+}
+.span25:first-child {
+    width:25%;
+}
+.span30{
+    width:29%;
+}
+.span30:first-child {
+    width:30%;
+}
+.span35 {
+    width:34%;
+}
+.span35:first-child {
+    width:35%;
+}
+.span40 {
+    width:39%;
+}
+.span40:first-child {
+    width:40%;
+}
+.span45 {
+    width:44%;
+}
+.span45:first-child {
+    width:45%;
+}
+.span50{
+    width:49%;
+}
+.span50:first-child {
+    width:50%;
+}
+.span55 {
+    width:54%;
+}
+.span55:first-child {
+    width:55%;
+}
+.span60 {
+    width:59%;
+}
+.span60:first-child {
+    width:60%;
+}
+.span65 {
+    width:64%;
+}
+.span65:first-child {
+    width:65%;
+}
+.span70 {
+    width:69%;
+}
+.span70:first-child {
+    width:70%;
+}
+.span75 {
+    width:74%;
+}
+.span75:first-child {
+    width:75%;
+}
+.span80 {
+    width:79%;
+}
+.span80:first-child {
+    width:80%;
+}
+.span85 {
+    width:84%;
+}
+.span85:first-child {
+    width:85%;
+}
+.span90 {
+    width:89%;
+}
+.span90:first-child {
+    width:90%;
+}
+.span100 {
+    width:100%;
+}
+/*module*/
+.module {
+    background-color:white;
+}
+.module-header {
+    margin-bottom: 1em;
+    border-bottom:0.1em solid #999;
+}
+.module-header:before,.module-header:after {
+    display: table;
+    content: "";
+}
+.module-header:after {
+    clear: both;
+}
+.module-header h4{
+    display:inline-block;
+    padding:0.3em 0;
+    width: auto;
+    clear: none;
+    float: left;
+    color:#666;
+    font-weight:bold;
+}
+.module-header h4+a{
+    float:right;
+    font-size:1.8em;
+    color:#00ccff;
+    padding:0.3em 0;
+    cursor:pointer;
+}
+.module-content{
+
+}
+
+.pannel-page .box {
+    border: 0.1em solid #DEDEDE;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    box-shadow: 0 0 1em rgba(189, 189, 189, 0.4);
+    -webkit-box-shadow: 0 0 1em rgba(189, 189, 189, 0.4);
+    -moz-box-shadow: 0 0 1em rgba(189, 189, 189, 0.4);
+    background-color:white;
+}
+.pannel-page .box-header {
+    border: none;
+    padding-top: 0.5em;
+    border-bottom: 0.1em solid #DEDEDE;
+    border-radius: 0.3em 0.3em 0 0;
+    -webkit-border-radius: 0.3em 0.3em 0 0;
+    -moz-border-radius: 0.3em 0.3em 0 0;
+    margin-bottom: 0;
+    cursor: move;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#1a000000',GradientType=0 );
+}
+.pannel-page .box-header h4 {
+    display:inline-block;
+    color: #999;
+    font:2em "微软雅黑",arial,tahoma;
+    padding:0.3em;
+    font-size: 2em;
+    width: auto;
+    clear: none;
+    float: left;
+}
+.pannel-page .box-header .toolbox {
+    float: right;
+}
+.pannel-page .box-content{
+    padding:1em;
+}
+
+.well {
+    min-height: 2em;
+    padding: 2em;
+    margin-bottom:2em;
+    background-color: #f5f5f5;
+    border: 0.1em solid #e3e3e3;
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.05);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,0.05);
+}
+
+/* Bootstrap code examples
+-------------------------------------------------- */
+
+/* Base class */
+.docs-example {
+    position: relative;
+    margin: 1.5em 0;
+    padding: 4em 2em 1.5em;
+    *padding-top: 2em;
+    background-color: #fff;
+    border: 0.1em solid #ddd;
+}
+
+/* Echo out a label for the example */
+.docs-example:after {
+    content: "Example";
+    position: absolute;
+    top: -0.1em;
+    left: -0.1em;
+    padding: 0.3em 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 0.1em solid #ddd;
+    color: #9da0a4;
+}
+
+.docs-example+.prettyprint{
+    margin-top: -2em;
+    padding-top:1.5em;
+}

@@ -1,0 +1,513 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>后台登陆</title>
+    <link rel="stylesheet" type="text/css" href="../Style/SpecialPage/Admin/AdminHome.css" />
+    <link rel="stylesheet" type="text/css" href="../Style/Plugin/jquery.Jcrop.css" />
+    <!--[if lt IE 9]>
+        <script src="../JavaScript/Plugin/html5.js"></script>
+        <script src="../JavaScript/Plugin/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../JavaScript/Jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../JavaScript/Plugin/jquery.Jcrop.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Setting.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Lib.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/BaseComponent.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/ExtensiveComponent.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Common.js"></script>
+    <script type="text/javascript" src="../JavaScript/Common/Test.js"></script>
+    <script type="text/javascript" src="../JavaScript/AdminHome.js"></script>
+</head>
+<body class="pannel-page fixedHeader-body">
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="PageIndetify">
+                <label>后台管理平台</label>
+            </div>
+            <button id="logout" class="iconButton fg-color-gray icon-logout x48 pull-right"></button>
+            <button id="UserSetting" class="iconButton fg-color-gray icon-setting x48 pull-right"></button>
+            <div class="UserInfo pull-right">
+                <div class="UserName">
+                    <label>KeZhi</label>
+                </div>
+                <div class="UserAvatar">
+                    <img src="../Picture/User/Avatar/UserAvatar.png" class="Avatar dropdown-toggle" data-toggle="dropdown" />
+                    <ul class="dropdown-menu"><li></li><li></li></ul>
+                </div>
+                <div class="UserInfoSummary"></div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span20">
+                <ul class="Nav vertical-list level2">
+                    <!-- 系统管理 -->
+                    <li>
+                        <div class="ItemBody">
+                            <div class="ItemMainDiv">
+                                <label class="title">系统管理</label>
+                            </div>
+                            <div class="ItemChildUlBox">
+                                <ul class="ItemChildUl">
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="BaseInfo">基本信息管理</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="actived">
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="UserCenter">用户中心</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="AccountManage">用户账户管理</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="RoleManage">用户权限管理</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 信息管理 -->
+                    <li>
+                        <div class="ItemBody">
+                            <div class="ItemMainDiv">
+                                <label class="title">信息管理</label>
+                            </div>
+                            <div class="ItemChildUlBox">
+                                <ul class="ItemChildUl">
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="OrganizationalStructure">组织架构</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="MomrabiliaManage">大事记</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="ArticalManage">文章管理</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 发布系统 -->
+                    <li>
+                        <div class="ItemBody">
+                            <div class="ItemMainDiv">
+                                <label class="title">发布系统</label>
+                            </div>
+                            <div class="ItemChildUlBox">
+                                <ul class="ItemChildUl">
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="NewsManage">新闻动态管理</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="AnnouncementManage">公告</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ItemBody">
+                                            <div class="ItemMainDiv">
+                                                <label class="title" topanelpage="MessageManage">留言</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="span80">
+                <div class="sitePath-bar">
+                    <div class="Location">
+                        <div class="pin bounce"></div>
+                        <div class="pulse"></div>
+                    </div>
+                    <ul>
+                        <li><a>后台管理</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <div class="Panel">
+                            <div class="PanelBox">
+                                <div id="BaseInfo" class="PanelPage">
+                                    <div class="Tabs">
+                                        <ul><li class="Actived">基本信息</li><li>公司Logo</li></ul>
+                                        <div class="TabBox">
+                                            <div class="Tab ActivedTab">
+                                                <form class="form-horizontal dataForm">
+                                                    <fieldset>
+                                                        <legend>系统基本信息</legend>
+                                                        <ul class="form-list">
+                                                            <li class="control-group">
+                                                                <label class="control-label">站点名</label>
+                                                                <div class="controls">
+                                                                    <input id="SiteName" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">Logo</label>
+                                                                <div class="controls"><img id="Logo" class="InfoValue editable" src="" /></div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">域名</label>
+                                                                <div class="controls">
+                                                                    <input id="DNS" class="textInput InfoValue" type="text" required="required" reg="^http://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$ " tip="输入域名" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">IP</label>
+                                                                <div class="controls">
+                                                                    <input id="IP" class="textInput InfoValue IP" type="text" required="required" reg="^(\d+)\.(\d+)\.(\d+)\.(\d+)$" tip="请输入IP地址！" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">IPC</label>
+                                                                <div class="controls">
+                                                                    <input id="IPC" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">状态</label>
+                                                                <div class="controls">
+                                                                    <div id="SiteState" class="DropSelector">
+                                                                        <span class="InfoValue"></span>
+                                                                        <ul></ul>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">城市</label>
+                                                                <div class="controls">
+                                                                    <input id="City" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">放大倍数</label>
+                                                                <div class="controls">
+                                                                    <input id="Zoom" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">电话</label>
+                                                                <div class="controls">
+                                                                    <input id="Telephone" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">传真</label>
+                                                                <div class="controls">
+                                                                    <input id="Fax" class="textInput InfoValue" type="text" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <div class="Tab">
+                                                <form>
+                                                    <h2>设置工作室Logo</h2>
+                                                    <fieldset id="LogoImgUploader" class="ImgUploader">
+                                                        <ul class="vertical-list">
+                                                            <li>
+                                                                <div class="FileSelector">
+                                                                    <label>请选择图片（.jpg,.bmp.png）！</label><input id="File1" type="file" class="" />
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="ImgPreview"></div>
+                                                                <div class="cuttedImgContainer"><img src="#" /></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="ProgressBar"><span></span></div>
+                                                            </li>
+                                                            <li>
+                                                                <input type="button" class="TextButton pull-left UploadImg" value="上传" /><input type="button" class="TextButton pull-right SetImg" value="设置为头像" />
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="UserCenter" class="PanelPage">
+                                    <div class="row-fluid">
+                                        <div class="span25 top-block">
+                                            <span class="ObjectIcon x24 fg-color-lightred icon-user-2"></span>
+                                            <div>Total Member</div>
+                                            <div>507</div>
+                                            <span class="notification">6</span>
+                                        </div>
+                                        <div class="span25 top-block">
+                                            <span class="ObjectIcon x24 fg-color-lightred icon-user-2"></span>
+                                            <div>Total Member</div>
+                                            <div>507</div>
+                                            <span class="notification">6</span>
+                                        </div>
+                                        <div class="span25 top-block">
+                                            <span class="ObjectIcon x24 fg-color-lightred icon-user-2"></span>
+                                            <div>Total Member</div>
+                                            <div>507</div>
+                                            <span class="notification">6</span>
+                                        </div>
+                                        <div class="span25 top-block">
+                                            <span class="ObjectIcon x24 fg-color-lightred icon-user-2"></span>
+                                            <div>Total Member</div>
+                                            <div>507</div>
+                                            <span class="notification">6</span>
+                                        </div>
+                                    </div>
+                                    <div class="Tabs">
+                                        <ul><li class="Actived">基本资料</li><li>用户头像</li><li>隐私设置</li><li>登陆历史</li></ul>
+                                        <div class="TabBox">
+                                            <!--base user info-->
+                                            <div class="Tab ActivedTab">
+                                                <form class="form-horizontal dataForm" action="dataServer.ashx?field=userCenter">
+                                                    <fieldset>
+                                                        <legend>基本用户信息</legend>
+                                                        <ul class="form-list">
+                                                            <li class="control-group">
+                                                                <label class="control-label">用户名</label>
+                                                                <div class="controls">
+                                                                    <input id="UserName" class="textInput InfoValue" type="text" required="required" url="#" tip="请输入4-20位字母开头的字母或数字和下划线" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">用户头像</label>
+                                                                <div class="controls">
+                                                                    <img id="Avatar" class="InfoValue editable" src="#" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">性别</label>
+                                                                <div class="controls">
+                                                                    <div id="Sex" class="DropSelector">
+                                                                        <span class="InfoValue"></span>
+                                                                        <ul></ul>
+                                                                    </div>
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">生日</label>
+                                                                <div class="controls">
+                                                                    <input id="Birthday" class="textInput InfoValue" type="date" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">邮箱</label>
+                                                                <div class="controls">
+                                                                    <input id="Email" class="textInput InfoValue" type="email" required="required" reg="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" tip="邮箱地址，如wangking717@qq.com" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">手机号码</label>
+                                                                <div class="controls">
+                                                                    <input id="telephone" class="textInput InfoValue" type="tel" maxlength="11" reg="^0{0,1}13[0-9]{9}$" tip="手机号，如1821333345" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">权限</label>
+                                                                <div class="controls"><span id="Role" class="InfoValue UnEditable"></span></div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">部门</label>
+                                                                <div class="controls"><span id="Department" class="InfoValue UnEditable"></span></div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">职位</label>
+                                                                <div class="controls"><span id="Job" class="InfoValue UnEditable"></span></div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">个人简介</label>
+                                                                <div class="controls">
+                                                                    <textarea id="IndividualResume" class="textInput InfoValue horizontalfull"></textarea>
+                                                                    <p class="help-block"></p>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <!--user avatar uploader-->
+                                            <div class="Tab">
+                                                <form>
+                                                    <h2>设置您的头像</h2>
+                                                    <fieldset id="AvatarImgUploader" class="ImgUploader">
+                                                        <ul class="vertical-list">
+                                                            <li>
+                                                                <div class="FileSelector">
+                                                                    <label>请选择图片（.jpg,.bmp,.png格式）！</label><input id="UploadAvatar" type="file" />
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="ImgPreview"></div>
+                                                                <div class="cuttedImgContainer"><img src="#" /></div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="ProgressBar"><span></span></div>
+                                                            </li>
+                                                            <li>
+                                                                <input type="button" class="TextButton pull-left UploadImg" value="上传" />
+                                                                <input type="button" class="TextButton pull-right SetImg" value="设置为头像" />
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <!--password setting-->
+                                            <div class="Tab">
+                                                <form class="form-horizontal">
+                                                    <fieldset>
+                                                        <legend>密码设定</legend>
+                                                        <ul class="form-list">
+                                                            <li class="control-group">
+                                                                <label class="control-label">原密码</label>
+                                                                <div class="controls">
+                                                                    <input id="oldPassword" class="textInput" type="password" required="required" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">新密码</label>
+                                                                <div class="controls">
+                                                                    <input id="newPassword" class="textInput" required="required" type="password" passwordstrengthchecktarget="passwordStrengthDisplayer" surevalidatetarget="newPassword2" required="required" reg="^[a-zA-Z]\w{5,17}$" tip="密码以字母开头，长度在6-18之间，只能包含字符、数字和下划线" />
+                                                                    <span class="help-inline"></span>
+                                                                    <div><div id="passwordStrengthDisplayer" class="passwordStrength"></div></div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">确认新密码</label>
+                                                                <div class="controls">
+                                                                    <input id="newPassword2" class="textInput" type="password" readonly="readonly" required="required" />
+                                                                    <span class="help-inline"></span>
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label">验证码</label>
+                                                                <div class="controls">
+                                                                    <input id="validateCode" class="textInput validateCode" type="text" required="required" />
+                                                                    <img src="#" class="img-validateCode" />
+                                                                </div>
+                                                            </li>
+                                                            <li class="control-group">
+                                                                <label class="control-label"></label>
+                                                                <div class="controls">
+                                                                    <input id="submit_password" type="button" class="TextButton submitButton" value="确认" />
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <!--loginHistory-->
+                                            <div class="Tab">
+                                                <table id="LoginHistory" class="DataTable">
+                                                    <caption class="textleft">以下是您进10次的登录历史，如有问题，请核实后尽快修改密码</caption>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="AccountManage" class="PanelPage">
+                                    <table id="AccountTable" class="DataTable">
+                                        <!-- <caption><h2>用户账户管理表</h2></caption>-->
+                                    </table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="RoleManage" class="PanelPage">
+                                    <table id="RoleTable" class="DataTable">
+                                        <!-- <caption><h2>用户权限管理表</h2></caption>-->
+                                    </table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="OrganizationalStructure" class="PanelPage">
+                                    <div class="orgStru">
+                                    </div>
+                                </div>
+                                <div id="MomrabiliaManage" class="PanelPage">
+                                    <table id="MomrabiliaTable" class="DataTable">
+                                        <!-- <caption><h2>大事记管理表</h2></caption>-->
+                                    </table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="ArticalManage" class="PanelPage">
+                                    <table id="ArticalTable" class="DataTable">
+                                        <!-- <caption><h2>文章管理表</h2></caption>-->
+                                    </table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="NewsManage" class="PanelPage">
+                                    <table id="NewsTable" class="DataTable"></table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="AnnouncementManage" class="PanelPage">
+                                    <table id="AnnouncementTable" class="DataTable">
+                                        <!-- <caption><h2>用户账户管理表</h2></caption>-->
+                                    </table>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                                <div id="MessageManage" class="PanelPage">
+                                    <ul id="MessageList" class="vertical-list data-list dir-list large MessageList"></ul>
+                                    <ul class="Pagination"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="PageFooter"></div>
+</body>
+</html>

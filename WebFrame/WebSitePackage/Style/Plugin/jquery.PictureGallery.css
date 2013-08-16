@@ -1,0 +1,36 @@
+﻿.PictureGalleryBox {
+    position:relative;
+    padding: 0;
+    border:0.1em solid #333;
+}
+.PictureGalleryBox button{
+    position:absolute;
+    width:2.5em;
+    top:0;
+    height:100%;
+    line-height:100%;
+    text-align:center;
+    color:#00ccff;
+    background-color:transparent;
+    cursor:pointer;
+    border:none;
+    font-weight:bold;
+    font-size:2em;
+}
+.PictureGalleryBox button:hover{
+    background-color:rgba(128,128,128,0.7);
+}
+.PictureGalleryBox .prev{
+    left:0;
+}                                                                                                                   
+.PictureGalleryBox .next{
+    right:0;
+}
+.PictureGalleryBox ul{
+    margin-left:0;
+}
+.PictureGalleryBox li{
+    width:auto;
+    height:auto;
+    padding:0;
+}

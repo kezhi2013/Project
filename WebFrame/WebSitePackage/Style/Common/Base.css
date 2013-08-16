@@ -1,0 +1,708 @@
+﻿@import url(IconFont/IconFont-Base.css);
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    outline:none;
+}
+html, body {
+    height: 100%;
+}
+html {
+    position:relative;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    background-color:white;
+}
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,canvas,video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+ /*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+    display: none;
+}
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,button,input,select,textarea {
+    font-family: sans-serif;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1, h2, h3, h4, h5, h6, h7 {
+    text-align:left;
+    padding:0.5em 0;
+    font-weight: 100;
+    text-transform: lowercase;
+    text-rendering: optimizelegibility;
+}
+h1 {
+    font-size: 3.2em;
+}
+h2 {
+    font-size: 2.8em;
+}
+h3 {
+    font-size: 2.4em;
+}
+h4 {
+    font-size: 2em;
+}
+h5 {
+    font-size: 1.6em;
+}
+h6 {
+    font-size: 1.4em;
+}
+h1 small {
+    font-size: 2.4em;
+}
+h2 small {
+    font-size: 1.6em;
+}
+h3 small {
+    font-size:1.4em;
+}
+h4 small {
+    
+    font-size: 1.2em;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999;
+}
+/*
+ * Addresses styling not present
+     in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+    border-bottom: 0.1em dotted;
+}
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+b,strong {
+    font-weight: bold;
+}
+blockquote {
+    margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+    font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+    background: #ff0;
+    color: #000;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,code,kbd,samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+pre,code,kbd,samp{
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    font-size: 1.2em;
+    color: #333;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+    font-size: 1.3em;
+    line-height: 2em;
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+q {
+    quotes: none;
+}
+/* 2 */
+q:before,q:after {
+    content: '';
+    content: none;
+}
+small {
+    font-size: 75%;
+}
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+fieldset {
+    outline:none;
+    border-width:0;
+}
+fieldset > legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 2em;
+    font-size: 2em;
+    line-height: 3em;
+    color: #333;
+    border: 0;
+    border-bottom:0.05em solid #ddd;
+}
+blockquote {
+    padding: 0 0 0 1.5em;
+    margin: 0 0 2em;
+    border-left: 0.5em solid #eee;
+}
+blockquote small {
+    display: block;
+    line-height:2em;
+    color: #999;
+}
+blockquote small:before {
+    content: '\2014 \00A0';
+}
+p{
+    margin-bottom:1em;
+    font-size:1.4em;
+    color: #333;
+    line-height: 150%;
+}
+code {
+    padding:0 0.3em;
+    background-color: #f7f7f9;
+    border: 0.1em solid #e1e1e8;
+    white-space: nowrap;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 1em;
+    color: #d14;
+}
+/*list*/
+ul{
+    list-style-type:circle;
+    padding: 0;
+    margin: 0 0 1em 2.5em;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    line-height:2em;
+}
+ol{
+    padding: 0;
+    margin: 0 0 1em 2.5em;
+    list-style-type:decimal;
+    list-style-position:inside;
+}
+ul.unstyled, ol.unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+ul.inline, ol.inline {
+    margin-left: 0;
+    list-style: none;
+}
+ul.inline>li, ol.inline>li {
+    display: inline-block;
+    padding-right:0.5em;
+    padding-left: 0.5em;
+}
+.dl-horizontal {
+}
+dl{
+    line-height:200%;
+}
+.dl-horizontal dt {
+    float: left;
+    width: 16em;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 18em;
+}
+dl>dt{
+    font-weight:bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/**/
+label, input, button, select, textarea {
+    font-size: 1.4em;
+    font-weight: normal;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    cursor:pointer;
+}
+a:focus {
+    outline: thin dotted;
+}
+a:hover {
+    color: #00ccff;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,a:active {
+    outline: 0;
+}
+input,textarea{
+    outline:none;
+}
+button, input[type=button],input[type=submit] {
+    cursor:pointer;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+    border: 0;
+    /* 1 */
+    -ms-interpolation-mode: bicubic;
+    /* 2 */
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+    overflow: hidden;
+}
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],input[disabled] {
+    cursor: default;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+    overflow: auto;
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,input,select,textarea {
+    font-size: 100%;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    vertical-align: baseline;
+    *vertical-align: middle;
+    /* 3 */
+}
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+    cursor: pointer;
+    /* 1 */
+    -webkit-appearance: button;
+    /* 2 */
+    *overflow: visible;
+    /* 3 */
+}
+/*clearfix*/
+.clearfix {
+    clear:both;
+}
+.cf:before,.cf::after {
+    content:"";
+    display:table;
+}
+.cf::after {
+    clear:both;
+}
+.cf {
+    zoom:1;
+}
+/*textalign*/
+.text-left{
+    text-align:left;
+}
+.text-center {
+    text-align:center;
+}
+.text-right {
+    text-align:right;
+}
+/*fluid*/
+.pull-left{
+    float:left !important;
+}
+.pull-right{
+    float:right !important;
+}
+/*
+    */
+.inlineblock {
+    display:inline-block;
+}
+.inline {
+    display:inline;
+}
+/*selfadapter*/
+.heightadapter {
+    padding-bottom: 32767px !important;
+    margin-bottom: -32767px !important;
+}
+.autowidth {
+    width:auto;
+}
+.fulladapter {
+    width:100%;
+    height:100%;
+}
+.horizontalfull {
+    width:100%;
+}
+.verticalfull {
+    height:100%;
+}
+/*table display*/
+.table {
+    width: 100%;
+    display:table;
+}
+.tablecell {
+    display:table-cell;
+    vertical-align: top;
+}
+.tablerow {
+    display:table-row;
+}
+.tablecolumn {
+    display:table-column;
+}
+/*垂直控制*/
+.verticalalign-top {
+    vertical-align:top !important;
+}
+.verticalalign-middle {
+    vertical-align:middle !important;
+}
+.verticalalign-bottom {
+    vertical-align:bottom !important;
+}
+/*loading*/
+@-webkit-keyframes Loading{
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+/*各个图标字体标签样式*/
+.objectIcon {
+    display:inline-block;
+    text-align:center;
+    cursor:default;
+    width:1.5em;
+    height:1.5em;
+    line-height:1.5em;
+    font-size:1.6em;
+}
+.objectIcon.x16 {
+    font-size:1.2em;
+}
+.objectIcon.x24 {
+    font-size:1.6em;
+}
+.objectIcon.x32 {
+    font-size:2.4em;
+}
+.objectIcon.x40 {
+    font-size:3.2em;
+}
+.objectIcon.x48 {
+    font-size:4.0em;
+}
+.objectIcon.x64 {
+    font-size:4.8em;
+}
+.objectIcon.x96 {
+    font-size:7.2em;
+}
+/*文本按钮类型*/
+.textButton {
+    padding: 0.4em 1.5em;
+    min-width:5em;
+    border-width:0;
+    border-style:solid;
+    border-color:transparent;
+    font-size:1.4em;
+    color:black;
+    font-weight:bold;
+    /*letter-spacing:0.3em;*/
+    text-align:center;
+}
+.textButton.small {
+    font-size:1.2em;
+}
+.textButton.middle {
+    font-size:1.4em;
+}
+.textButton.large {
+    font-size:1.6em;
+}
+.textButton.larger {
+    font-size:2em;
+}
+.textButton.largest {
+    font-size:2.4em;
+}
+input.textButton {
+    background-color:transparent;
+    color:black;
+    border-color:#999;
+    border-width:0.2em;   
+}
+input.textButton:active{
+    border-color:black;
+    background-color:black;  
+    color:white;
+}
+/*iconButton*/
+.iconButton {
+    display:inline-block;
+    text-align:center;
+    font-size:1.6em;
+    width:1.5em;
+    height:1.5em;
+    border-style:solid;
+    border-color:transparent;
+    background-color:transparent;
+}
+.iconButton.x16 {
+    font-size:1.07em;
+}
+.iconButton.x24 {
+    font-size:1.6em;
+}
+.iconButton.x32 {
+    font-size:2.13em;
+}
+.iconButton.x48 {
+    font-size:3.2em;
+}
+.iconButton.x64 {
+    font-size:4.23em;
+}
+
+.iconButton.noPadding {
+    display:inline-block;
+    text-align:center;
+    font-size:2.4em;
+    width:1em;
+    height:1em;
+}
+.iconButton.noPadding.x16 {
+    font-size:1.6em;
+}
+.iconButton.noPadding.x24 {
+    font-size:2.4em;
+}
+.iconButton.noPadding.x32 {
+    font-size:3.2em;
+}
+.iconButton.noPadding.x48 {
+    font-size:4.8em;
+}
+.iconButton.noPadding.x64 {
+    font-size:6.4em;
+}
+.iconButton.Circle{
+    padding:0;
+    border-radius:1.5em;
+}
+.iconButton.withBorder.Black{
+    border-color:black;
+    background-color:transparent;
+    color:black;
+}
+.iconButton.withBorder.White{
+    border-color:white;
+    background-color:transparent;
+    color:white;
+}
+.iconButton.colorBlock{
+    border-color:transparent;
+    color:white;
+}
+/*input and textarea*/
+.textInput{
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    outline: 0;
+    height: 2.4em;
+    font-size: 1.4em;
+    background-color: #fff;
+    border: 0.1em solid #999;
+    color: #333;
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.textInput:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+    font-weight:bold;
+}
+.textInput.dark{
+    background-color:transparent;
+    border:0.1em solid #00ccff;
+    color:white;
+}
+input, button, select, textarea {
+    font-family:'Microsoft YaHei', 'Microsoft YaHei UI',"Helvetica Neue", Helvetica, Arial, sans-serif;  
+}
+input,textarea {
+    width: 20em;
+}
+textarea {
+    overflow:hidden;
+    vertical-align:top;
+    letter-spacing:0.1em;
+}
+input[type="date"]{
+    width:11em;
+}
+input[type="email"] {
+    width:15em;
+}
+input[type="tel"]{
+    width:8.5em;
+}
+input.IP{
+    width:10em;
+}
+input.date{
+    width:7.5em;
+}
+input.validateCode{
+    width:7em;
+}
+textarea{
+    min-height:10em;
+}
+img.img-validateCode{
+    width:7em;
+    height:2.8em;
+    vertical-align:top;
+}
+
+.muted {
+color: #999;
+}
+.text-warning {
+    color: #c09853;
+}
+.text-error {
+    color: #b94a48;
+}
+.text-info {
+    color: #3a87ad;
+}
+.text-success {
+    color: #468847;
+}
+
+abbr[title], abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 0.1em dotted #999;
+}
